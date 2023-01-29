@@ -8,6 +8,13 @@
   <name>jsp-servlet-example Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.13</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -21,6 +28,7 @@
       <version>3.1.0</version>
     </dependency>
 
+
   </dependencies>
   <build>
     <finalName>jsp-servlet-example</finalName>
@@ -33,6 +41,14 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.3</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>7</source>
+            <target>7</target>
+          </configuration>
         </plugin>
       </plugins>
   </build>
